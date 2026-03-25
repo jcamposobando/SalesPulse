@@ -2,19 +2,24 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarGroup,
   SidebarHeader,
-} from "@/components/ui/sidebar"
- 
+} from "@/components/ui/sidebar";
+import { NavUser } from "./nav-user";
+import { NavSecondary } from "./nav-secondary";
+import data from "../data/data.json";
+
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar variant="floating">
       <SidebarHeader />
       <SidebarContent>
-        <SidebarGroup />
-        <SidebarGroup />
+        {/* <NavMain items={data.navMain} />
+        <NavProjects projects={data.projects} /> */}
+        <NavSecondary className="mt-auto" />
       </SidebarContent>
-      <SidebarFooter />
+      <SidebarFooter>
+        <NavUser user={data.user} />
+      </SidebarFooter>
     </Sidebar>
-  )
+  );
 }

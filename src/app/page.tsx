@@ -1,5 +1,6 @@
 import AppLayout from "../components/layouts/AppLayout";
 import Image from "next/image";
+import "@/app/globals.css";
 
 export default function Home() {
   return (
