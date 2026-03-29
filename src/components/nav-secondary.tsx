@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from "react";
 
 import {
@@ -5,6 +7,7 @@ import {
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
 import { LifeBuoy, Send } from "lucide-react";
@@ -16,18 +19,22 @@ export function NavSecondary(
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu>
-          <SidebarMenuButton asChild size="sm">
-            <a href="#">
-              <LifeBuoy />
-              <span>Support</span>
-            </a>
-          </SidebarMenuButton>
-          <SidebarMenuButton asChild size="sm">
-            <a href="#">
-              <Send />
-              <span>Feedback</span>
-            </a>
-          </SidebarMenuButton>
+          <SidebarMenuItem key="Support">
+            <SidebarMenuButton asChild size="sm">
+              <a href="#">
+                <LifeBuoy />
+                <span>Support</span>
+              </a>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem key="Feedback">
+            <SidebarMenuButton asChild size="sm">
+              <a href="#">
+                <Send />
+                <span>Feedback</span>
+              </a>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>

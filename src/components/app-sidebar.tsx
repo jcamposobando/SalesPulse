@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/sidebar";
 import { NavUser } from "./nav-user";
 import { NavSecondary } from "./nav-secondary";
+import { NavMain } from "./nav-main";
 import data from "../data/data.json";
 
 export function AppSidebar() {
@@ -13,8 +14,7 @@ export function AppSidebar() {
     <Sidebar variant="floating">
       <SidebarHeader />
       <SidebarContent>
-        {/* <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} /> */}
+        <NavMain />
         <NavSecondary className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
