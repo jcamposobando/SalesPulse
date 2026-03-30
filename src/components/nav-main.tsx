@@ -19,7 +19,7 @@ export function NavMain(
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu>
-          <SidebarMenuButton variant="outline" asChild>
+          <SidebarMenuButton variant="default" asChild>
             <Link href="/sale">
               <Send /> New Sale
             </Link>

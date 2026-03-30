@@ -1,11 +1,10 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 
-import { Outfit } from "next/font/google";
+import { Lexend } from "next/font/google";
 import "@/app/globals.css";
 
-
-const outfit = Outfit({ subsets: ["latin"] });
+const outfit = Lexend({ subsets: ["latin"] });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,8 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <SidebarProvider>
           <AppSidebar />
-            <SidebarTrigger />
-            {children}
+          <main className="m-2 w-full">{children}</main>
         </SidebarProvider>
       </body>
     </html>

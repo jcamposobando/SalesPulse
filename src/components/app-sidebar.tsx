@@ -13,7 +13,7 @@ export function AppSidebar() {
   return (
     <Sidebar variant="floating">
       <SidebarHeader />
-      <SidebarContent>
+      <SidebarContent >
         <NavMain />
         <NavSecondary className="mt-auto" />
       </SidebarContent>
